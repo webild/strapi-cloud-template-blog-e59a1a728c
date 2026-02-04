@@ -385,7 +385,9 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    content: Schema.Attribute.Blocks;
+    content: Schema.Attribute.DynamicZone<
+      ['shared.rich-text', 'shared.media', 'shared.quote', 'shared.slider']
+    >;
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

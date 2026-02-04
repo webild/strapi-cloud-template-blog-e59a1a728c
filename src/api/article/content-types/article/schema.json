@@ -30,7 +30,13 @@
       ]
     },
     "content": {
-      "type": "blocks"
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "shared.media",
+        "shared.quote",
+        "shared.slider"
+      ]
     }
   }
 }
